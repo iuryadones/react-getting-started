@@ -1,6 +1,7 @@
 {
   "name": "text2tag",
   "version": "0.1.0",
+  "homepage" : "http://iuryadones.github.io/react-getting-started",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
