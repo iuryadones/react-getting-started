@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-getting-started/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/react-getting-started/static/js/main.b11ed922.chunk.js",
+    "main.js.map": "/react-getting-started/static/js/main.b11ed922.chunk.js.map",
+    "runtime-main.js": "/react-getting-started/static/js/runtime-main.d351a06a.js",
+    "runtime-main.js.map": "/react-getting-started/static/js/runtime-main.d351a06a.js.map",
+    "static/js/2.d23f6904.chunk.js": "/react-getting-started/static/js/2.d23f6904.chunk.js",
+    "static/js/2.d23f6904.chunk.js.map": "/react-getting-started/static/js/2.d23f6904.chunk.js.map",
+    "index.html": "/react-getting-started/index.html",
+    "precache-manifest.2e5d1127e7ded4df2cf43131f26594c2.js": "/react-getting-started/precache-manifest.2e5d1127e7ded4df2cf43131f26594c2.js",
+    "service-worker.js": "/react-getting-started/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/react-getting-started/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.d23f6904.chunk.js.LICENSE": "/react-getting-started/static/js/2.d23f6904.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d351a06a.js",
+    "static/js/2.d23f6904.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.b11ed922.chunk.js"
+  ]
+}
