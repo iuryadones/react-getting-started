@@ -744,37 +744,509 @@ import * as serviceWorker from './serviceWorker';
 // );
 
 // App 21
-function Blog(props) {
-  const sidebar = (
-    <ul>
-      {props.posts.map((post) =>
-        <li key={post.id}>
-          {post.title}
-        </li>
-      )}
-    </ul>
-  );
-  const content = props.posts.map((post) =>
-    <div key={post.id}>
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
-    </div>
-  );
+// function Blog(props) {
+//   const sidebar = (
+//     <ul>
+//       {props.posts.map((post) =>
+//         <li key={post.id}>
+//           {post.title}
+//         </li>
+//       )}
+//     </ul>
+//   );
+//   const content = props.posts.map((post) =>
+//     <div key={post.id}>
+//       <h3>{post.title}</h3>
+//       <p>{post.content}</p>
+//     </div>
+//   );
+//   return (
+//     <div>
+//       {sidebar}
+//       <hr />
+//       {content}
+//     </div>
+//   );
+// }
+//
+// const posts = [
+//   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+//   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+// ];
+// ReactDOM.render(
+//   <Blog posts={posts} />,
+//   document.getElementById('root')
+// );
+
+
+// App 22
+// function Blog(props) {
+//   const sidebar = (
+//     <ul>
+//       {props.posts.map((post) =>
+//         <li key={post.id}>
+//           {post.title}
+//         </li>
+//       )}
+//     </ul>
+//   );
+//   const content = props.posts.map((post) =>
+//     <Post
+//       key={post.id}
+//       id={post.id}
+//       title={post.title}
+//       content={post.content}
+//     />
+//   );
+//   return (
+//     <div>
+//       {sidebar}
+//       <hr />
+//       {content}
+//     </div>
+//   );
+// }
+//
+// function Post(props) {
+//   console.log(props)
+//   return (
+//     <div key={props.id}>
+//       <h3>{props.title}</h3>
+//       <p>{props.content}</p>
+//     </div>
+//   )
+// }
+//
+// const posts = [
+//   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+//   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+// ];
+// ReactDOM.render(
+//   <Blog posts={posts} />,
+//   document.getElementById('root')
+// );
+
+// App 23
+// class NameForm extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {value: ''}
+//
+//     this.handleChange = this.handleChange.bind(this)
+//     this.handleSubmit = this.handleSubmit.bind(this)
+//   }
+//
+//   handleChange(event) {
+//     this.setState({value: event.target.value});
+//   }
+//
+//   handleSubmit(event) {
+//     alert('Um nome foi enviado: ' + this.state.value);
+//     event.preventDefault()
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//         <form onSubmit={this.handleSubmit}>
+//           <label>
+//             Nome:
+//           </label>
+//           <p>
+//             <input
+//               type="text"
+//               value={this.state.value}
+//               onChange={this.handleChange}
+//             />
+//           </p>
+//           <input type="submit" value="Enviar" />
+//         </form>
+//       </div>
+//     )
+//   }
+// }
+//
+// class EssayForm extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       value: 'Por favor, escreva uma dissertação sobre o seu elemento DOM favorito.'
+//     };
+//
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//   }
+//
+//   handleChange(event) {
+//     this.setState({value: event.target.value});
+//   }
+//
+//   handleSubmit(event) {
+//     alert('Uma dissertação foi enviada: ' + this.state.value);
+//     event.preventDefault();
+//   }
+//
+//   render() {
+//     return (
+//       <form onSubmit={this.handleSubmit}>
+//         <label>
+//           Dissertação:
+//           <textarea value={this.state.value} onChange={this.handleChange} />
+//         </label>
+//         <input type="submit" value="Enviar" />
+//       </form>
+//     )
+//   }
+// }
+//
+// class FlavorForm extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {value: 'coco'};
+//
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//   }
+//
+//   handleChange(event) {
+//     this.setState({value: event.target.value});
+//   }
+//
+//   handleSubmit(event) {
+//     alert('Seu sabor favorito é: ' + this.state.value);
+//     event.preventDefault();
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//         <form onSubmit={this.handleSubmit}>
+//           <label>
+//             Escolha seu sabor favorito:
+//             <select value={this.state.value} onChange={this.handleChange}>
+//               <option value="laranja">Laranja</option>
+//               <option value="limao">Limão</option>
+//               <option value="coco">Coco</option>
+//               <option value="manga">Manga</option>
+//             </select>
+//           </label>
+//           <input type="submit" value="Enviar" />
+//         </form>
+//       </div>
+//     )
+//   }
+// }
+//
+// class Reservation extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       isGoing: true,
+//       numberOfGuests: 2
+//     };
+//
+//     this.handleInputChange = this.handleInputChange.bind(this);
+//   }
+//
+//   handleInputChange(event) {
+//     const target = event.target;
+//     const value = target.type === 'checkbox' ? target.checked : target.value;
+//     const name = target.name;
+//
+//     this.setState({
+//       [name]: value
+//     });
+//   }
+//
+//   render() {
+//     return (
+//       <form>
+//         <label>
+//           Estão indo:
+//           <input
+//             name="isGoing"
+//             type="checkbox"
+//             checked={this.state.isGoing}
+//             onChange={this.handleInputChange} />
+//         </label>
+//         <br />
+//         <label>
+//           Número de convidados:
+//           <input
+//             name="numberOfGuests"
+//             type="number"
+//             value={this.state.numberOfGuests}
+//             onChange={this.handleInputChange} />
+//         </label>
+//       </form>
+//     )
+//   }
+// }
+//
+//
+// function App() {
+//   return (
+//     // <NameForm />
+//     // <EssayForm />
+//     // <FlavorForm />
+//     <Reservation />
+//   )
+// }
+//
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
+
+
+// App 24
+// ReactDOM.render(
+//   <input value="hi" />,
+//   document.getElementById('root')
+// );
+
+// App 25
+// ReactDOM.render(
+//   <input value="hi" />,
+//   document.getElementById('root')
+// )
+//
+// setTimeout(
+//   function() {
+//     ReactDOM.render(<input value={null} />,
+//     document.getElementById('root'))
+//   },
+//   1000
+// )
+
+
+// App 26
+// function BoilingVerdict(props) {
+//   if (props.celsius >= 100) {
+//     return <p>A água ferveria.</p>;
+//   }
+//   return <p>A água não ferveria.</p>;
+// }
+//
+// class Calculator extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.handleChange = this.handleChange.bind(this);
+//     this.state = {temperature: ''};
+//   }
+//
+//   handleChange(e) {
+//     this.setState({temperature: e.target.value});
+//   }
+//
+//   render() {
+//     const temperature = this.state.temperature;
+//     return (
+//       <fieldset>
+//         <legend>Informe a temperatura em Celsius:</legend>
+//         <input
+//           value={temperature}
+//           onChange={this.handleChange} />
+//
+//         <BoilingVerdict
+//           celsius={parseFloat(temperature)} />
+//
+//       </fieldset>
+//     );
+//   }
+// }
+//
+// const scaleNames = {
+//   c: 'Celsius',
+//   f: 'Fahrenheit'
+// };
+//
+// class TemperatureInput extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.handleChange = this.handleChange.bind(this);
+//     this.state = {temperature: ''};
+//   }
+//
+//   handleChange(e) {
+//     // this.setState({temperature: e.target.value});
+//     this.props.onTemperatureChange(e.target.value);
+//   }
+//
+//   render() {
+//     // Antes: const temperature = this.state.temperature;
+//     const temperature = this.props.temperature;
+//     const scale = this.props.scale;
+//     return (
+//       <fieldset>
+//         <legend>Informe a temperatura em {scaleNames[scale]}:</legend>
+//         <input value={temperature}
+//                onChange={this.handleChange} />
+//       </fieldset>
+//     );
+//   }
+// }
+//
+// function toCelsius(fahrenheit) {
+//   return (fahrenheit - 32) * 5 / 9;
+// }
+//
+// function toFahrenheit(celsius) {
+//   return (celsius * 9 / 5) + 32;
+// }
+//
+// function tryConvert(temperature, convert) {
+//   const input = parseFloat(temperature);
+//   if (Number.isNaN(input)) {
+//     return '';
+//   }
+//   const output = convert(input);
+//   const rounded = Math.round(output * 1000) / 1000;
+//   return rounded.toString();
+// }
+//
+// class CalculatorTemperature extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+//     this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+//     this.state = {temperature: '', scale: ''};
+//   }
+//
+//   handleCelsiusChange(temperature) {
+//     this.setState({
+//       scale: 'c', temperature
+//     })
+//   }
+//
+//   handleFahrenheitChange(temperature) {
+//     this.setState({
+//       scale: 'f', temperature
+//     })
+//   }
+//
+//   render() {
+//     const scale = this.state.scale;
+//     const temperature = this.state.temperature;
+//     const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+//     const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+//     return (
+//       <div>
+//         <TemperatureInput
+//           scale="c"
+//           temperature={celsius}
+//           onTemperatureChange={this.handleCelsiusChange} />
+//         <TemperatureInput
+//           scale="f"
+//           temperature={fahrenheit}
+//           onTemperatureChange={this.handleFahrenheitChange} />
+//         <BoilingVerdict
+//           celsius={parseFloat(temperature)} />
+//         <Calculator />
+//       </div>
+//     );
+//   }
+// }
+//
+// ReactDOM.render(
+//   <CalculatorTemperature />,
+//   document.getElementById('root')
+// )
+//
+
+
+// App 27
+// function FancyBorder(props) {
+//   return (
+//     <div className={'FancyBorder FancyBorder-' + props.color}>
+//       {props.children}
+//     </div>
+//   );
+// }
+//
+// function Dialog(props) {
+//   return (
+//     <FancyBorder color="blue">
+//       <h1 className="Dialog-title">
+//         {props.title}
+//       </h1>
+//       <p className="Dialog-message">
+//         {props.message}
+//       </p>
+//     </FancyBorder>
+//   );
+// }
+//
+// function WelcomeDialog() {
+//   return (
+//     <Dialog
+//       title="Bem-vindo"
+//       message="Obrigado por visitar a nossa espaçonave!" />
+//
+//   );
+// }
+//
+// ReactDOM.render(
+//   <WelcomeDialog />,
+//   document.getElementById('root')
+// );
+
+// App 28
+function FancyBorder(props) {
   return (
-    <div>
-      {sidebar}
-      <hr />
-      {content}
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
     </div>
   );
 }
 
-const posts = [
-  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-];
+function Dialog(props) {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+      {props.children}
+    </FancyBorder>
+  );
+}
+
+class SignUpDialog extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSignUp = this.handleSignUp.bind(this)
+    this.state = {login: ''}
+  }
+
+  render() {
+    return (
+      <Dialog title="Programa de Exploração de Marte"
+              message="Como gostaria de ser chamado?">
+        <input value={this.state.login}
+               onChange={this.handleChange} />
+
+        <button onClick={this.handleSignUp}>
+          Cadastre-se!
+        </button>
+      </Dialog>
+    )
+  }
+
+  handleChange(e) {
+    this.setState({login: e.target.value})
+  }
+
+  handleSignUp() {
+    alert(`Bem-vindo a bordo, ${this.state.login}!`)
+  }
+}
+
 ReactDOM.render(
-  <Blog posts={posts} />,
+  <SignUpDialog />,
   document.getElementById('root')
 );
 
