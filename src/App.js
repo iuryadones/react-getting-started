@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Card from './components/Card'
+import Name from './apps/App1'
+import NameDict from './apps/App2'
+import NameConditional from './apps/App3'
+
 
 function App() {
+  const apps = [
+    {name: 'App 1 - Name', cmp: <Name />},
+    {name: 'App 2 - NameDict', cmp: <NameDict />},
+    {name: 'App 3 - NameConditional', cmp: <NameConditional />},
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Card apps={apps}/>
+  )
 }
 
-export default App;
+export default App
