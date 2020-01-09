@@ -2,22 +2,22 @@ import React from 'react'
 
 
 function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+  return user.firstName + ' ' + user.lastName
 }
 
 function getGreenting(user) {
   if (Object.keys(user).length) {
-    return <h1>Hi, {formatName(user)}!</h1>;
+    return <h1>Hi, {formatName(user)}!</h1>
   }
-  return <h1>Hi, Stranger.</h1>;
+  return <h1>Hi, Stranger.</h1>
 }
 
 
 function NameConditional() {
-  const userNull = {};
-  const case_one = getGreenting(userNull);
-  const user = {'firstName': 'Iury', 'lastName': 'Adones'};
-  const case_two = getGreenting(user);
+  const userNull = {}
+  const case_one = getGreenting(userNull)
+  const user = {'firstName': 'Iury', 'lastName': 'Adones'}
+  const case_two = getGreenting(user)
   return (
     <div>
       <div>

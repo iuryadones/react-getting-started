@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
