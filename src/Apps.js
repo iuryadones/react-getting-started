@@ -27,6 +27,7 @@ import NullDefaultValueInput from './apps/App25'
 import CalculatorTemperature from './apps/App26'
 import WelcomeDialog from './apps/App27'
 import SignUpDialog from './apps/App28'
+import CountWithHook from './apps/App29'
 
 
 function Apps() {
@@ -59,6 +60,7 @@ function Apps() {
     {name: 'App 26 - CalculatorTemperature', cmp: <CalculatorTemperature />},
     {name: 'App 27 - WelcomeDialog', cmp: <WelcomeDialog />},
     {name: 'App 28 - SignUpDialog', cmp: <SignUpDialog />},
+    {name: 'App 29 - CountWithHook', cmp: <CountWithHook />},
   ]
 
   return apps
