@@ -2,6 +2,7 @@ import React from 'react'
 
 
 function SelectText () {
+
   var selectObj = document.getSelection()
   var text = selectObj.toString()
   var range = selectObj.getRangeAt(0)
@@ -33,11 +34,7 @@ export default function SelectionText(){
   return (
     <div>
       <div onMouseUp={SelectText}>
-        <p>olá mundo, selecione o texto</p>
-      </div>
-
-      <div onMouseUp={SelectText}>
-        <p>Outro documento para selecionar o texto</p>
+        <p>olá mundo, selecione o texto, que massa quero selecionar o texto e fazer a modelagem por entidades.</p>
       </div>
     </div>
   )
