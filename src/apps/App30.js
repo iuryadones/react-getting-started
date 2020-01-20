@@ -6,6 +6,8 @@ function SelectText () {
   var selectObj = document.getSelection()
   var text = selectObj.toString()
   var range = selectObj.getRangeAt(0)
+  console.log(selectObj)
+  console.log(range)
   var startText = range.startOffset
   var endText = range.endOffset
 
@@ -13,9 +15,14 @@ function SelectText () {
     var newNode = document.createElement("span")
     newNode.setAttribute(
       "style",
-      "background-color: yellow; display: inline;"
+      "background-color: yellow; display: inline; opacity: 0.2;"
     )
-    range.surroundContents(newNode)
+    var content = range.extractContents()
+
+    console.log(content)
+
+    newNode.appendChild(content)
+    range.insertNode(newNode)
 
     var selectedText = JSON.stringify(
       {
@@ -26,7 +33,6 @@ function SelectText () {
       }
     )
     console.log(selectedText)
-    alert(selectedText)
   }
 }
 
