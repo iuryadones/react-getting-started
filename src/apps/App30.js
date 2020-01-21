@@ -6,8 +6,6 @@ function SelectText () {
   var selectObj = document.getSelection()
   var text = selectObj.toString()
   var range = selectObj.getRangeAt(0)
-  console.log(selectObj)
-  console.log(range)
   var startText = range.startOffset
   var endText = range.endOffset
 
@@ -18,8 +16,6 @@ function SelectText () {
       "background-color: yellow; display: inline; opacity: 0.2;"
     )
     var content = range.extractContents()
-
-    console.log(content)
 
     newNode.appendChild(content)
     range.insertNode(newNode)

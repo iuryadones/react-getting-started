@@ -29,6 +29,7 @@ import WelcomeDialog from './apps/App27'
 import SignUpDialog from './apps/App28'
 import CountWithHook from './apps/App29'
 import SelectionText from './apps/App30'
+import Text2Tagger from './apps/App31'
 
 
 function Apps() {
@@ -63,6 +64,7 @@ function Apps() {
     {name: 'App 28 - SignUpDialog', cmp: <SignUpDialog />},
     {name: 'App 29 - CountWithHook', cmp: <CountWithHook />},
     {name: 'App 30 - SelectionText', cmp: <SelectionText />},
+    {name: 'App 31 - Text2Tagger', cmp: <Text2Tagger />},
   ]
 
   return apps

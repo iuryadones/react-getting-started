@@ -2,11 +2,12 @@ import React from 'react'
 import logoGithub from './github.svg'
 import Card from './components/Card'
 import Apps from './Apps'
+import './App.css';
 
 
 function App() {
   return (
-    <div>
+    <div className='container-fluid'>
       <div
         style={{width: "10%",
                 float: 'left',
@@ -15,7 +16,8 @@ function App() {
           <img src={logoGithub} alt="GitHub" width='80%' />
         </a>
       </div>
-      <div style={{width: '90%',
+      <div
+        style={{width: '90%',
                    float: 'right'}}>
         <Card apps={Apps()}/>
       </div>
